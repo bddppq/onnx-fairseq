@@ -1,0 +1,15 @@
+[submodule "fairseq-py"]
+	path = fairseq-py
+	url = https://github.com/bddppq/fairseq-py
+[submodule "caffe2"]
+	path = caffe2
+	url = https://github.com/bddppq/caffe2.git
+[submodule "pytorch"]
+	path = pytorch
+	url = https://github.com/bddppq/pytorch.git
+[submodule "onnx"]
+	path = onnx
+	url = https://github.com/bddppq/onnx.git
+[submodule "onnx-caffe2"]
+	path = onnx-caffe2
+	url = https://github.com/bddppq/onnx-caffe2.git
