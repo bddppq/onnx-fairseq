@@ -13,7 +13,7 @@ mkdir -p $venv_dir
 rm -rf $venv_dir && python3.6 -m venv $venv_dir
 source $venv_dir/bin/activate
 pip install -U setuptools pip
-pip install pyyaml numpy protobuf future
+pip install pyyaml numpy protobuf future cffi
 
 src_dir="$workdir/src"
 
