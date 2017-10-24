@@ -19,7 +19,7 @@ src_dir="$workdir/src"
 
 # pytorch
 cd "$src_dir/pytorch"
-NO_CUDA=1 python setup.py build develop
+python setup.py build develop
 
 # caffe2
 c2_install_dir="$build_cache_dir/caffe2"
@@ -28,6 +28,7 @@ cd "$src_dir/caffe2"
 mkdir -p build
 cd build
 cmake \
+    -DPYTHON_EXECUTABLE=$(which python) \
     -DPYTHON_INCLUDE_DIR="$(python -c 'from distutils import sysconfig; print(sysconfig.get_python_inc())')" \
     -DPYTHON_LIBRARY=/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/libpython3.6.so \
     -DCMAKE_INSTALL_PREFIX:PATH="$c2_install_dir" \
