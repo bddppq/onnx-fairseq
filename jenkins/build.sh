@@ -29,7 +29,7 @@ mkdir -p build
 cd build
 cmake \
     -DPYTHON_INCLUDE_DIR="$(python -c 'from distutils import sysconfig; print(sysconfig.get_python_inc())')" \
-    -DPYTHON_LIBRARY=$(python -c "import distutils.sysconfig as sysconfig; print(sysconfig.get_config_var('LIBDIR'))")/libpython3.6m.dylib \
+    -DPYTHON_LIBRARY=/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/libpython3.6.so \
     -DCMAKE_INSTALL_PREFIX:PATH="$c2_install_dir" \
     -DBUILD_TEST=OFF \
     -DUSE_CUDA=OFF \
