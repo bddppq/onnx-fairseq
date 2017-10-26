@@ -33,8 +33,8 @@ cmake \
     -DPYTHON_LIBRARY=/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/libpython3.6.so \
     -DCMAKE_INSTALL_PREFIX:PATH="$c2_install_dir" \
     -DBUILD_TEST=OFF \
-    -DUSE_CUDA=OFF \
     -DUSE_ATEN=ON \
+    -DUSE_NNPACK=OFF \
     ..
 make -j16
 make install
