@@ -25,8 +25,7 @@ python setup.py build develop
 c2_install_dir="$build_cache_dir/caffe2"
 rm -rf $c2_install_dir && mkdir -p $c2_install_dir
 cd "$src_dir/caffe2"
-mkdir -p build
-cd build
+rm -rf build && mkdir -p build && cd build
 cmake \
     -DPYTHON_EXECUTABLE=$(which python) \
     -DPYTHON_INCLUDE_DIR="$(python -c 'from distutils import sysconfig; print(sysconfig.get_python_inc())')" \
